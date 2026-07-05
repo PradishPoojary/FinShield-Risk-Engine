@@ -15,7 +15,3 @@ In this scenario, a high-value transaction is attempted via a Cryptocurrency mer
 
 ![API Response](assets/api_response.png)
 
-### Next Steps for Production Deployment:
-1. Dockerize the FastAPI application for Kubernetes orchestration.
-2. Implement PostgreSQL for persistent compliance audit logging.
-3. Deploy continuous model retraining pipelines via Apache Airflow.
