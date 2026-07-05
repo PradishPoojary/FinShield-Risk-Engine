@@ -23,31 +23,8 @@ graph TD;
     Review --> Response;
     Approve --> Response;
     Response --> Client;
+```
 
-    🛠️ Technical StackBackend Framework: FastAPI (Asynchronous, ASGI)Data Integrity: Pydantic (Strict typing and validation)AI/ML Engine: Scikit-Learn (Random Forest Ensemble), PandasModel Serialization: Pickle (In-memory loading for low-latency inference)📊 AI Model Performance MetricsThe proprietary model was trained on synthetic transaction data simulating complex fraud vectors (e.g., late-night, high-velocity, high-risk merchant categories).MetricScorePrecision100%Recall100%Accuracy100%Note to Reviewers: Please see DEMO.md for visual execution logs, API response traces, and integration examples.
 
----
-    
-    
-    
-# 🖥️ FinShield Execution Demo
 
-Since local execution may be restricted on enterprise assets, this document serves as a visual trace of the FinShield Risk Engine in a live environment.
 
-### 1. API Documentation & Schema Discovery
-FinShield automatically generates OpenAPI (Swagger) specifications. This allows banking gateways to seamlessly integrate with our endpoints.
-
-![Swagger UI](assets/swagger_ui.png)
-
-### 2. Real-Time AI Inference (Blocked Transaction)
-In this scenario, a high-value transaction is attempted via a Cryptocurrency merchant. 
-* The Pydantic model successfully parses and validates the data types.
-* The Random Forest model evaluates the feature set against historical rules.
-* The system accurately blocks the transaction, returning a structural JSON response to the banking gateway.
-
-![API Response](assets/api_response.png)
-
-### Next Steps for Production Deployment:
-1. Dockerize the FastAPI application for Kubernetes orchestration.
-2. Implement PostgreSQL for persistent compliance audit logging.
-3. Deploy continuous model retraining pipelines via Apache Airflow.
